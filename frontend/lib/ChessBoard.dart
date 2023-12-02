@@ -8,7 +8,7 @@ class ChessBoard extends StatelessWidget {
     for (int width = 0; width < 8; width++){
       for(int height = 0; height < 8; height++ ){
         listeWidgets.add(
-          Case(),
+          Case(rowChess: width,colChess: height),
         );
       }
    
