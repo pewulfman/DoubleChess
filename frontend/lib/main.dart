@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/ChessBoard.dart';
+import 'package:frontend/ReserveChessPiece.dart';
+import 'package:frontend/Stopwatch.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,12 +43,27 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: _backgroundColor,
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            ChessBoard(),
-          ],
-        ),
+        child : Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                StopWatch(),
+                StopWatch(),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: <Widget>[
+                ChessBoard(),
+                RectangleReserveChessPiece(),
+                ChessBoard(),
+              ],
+            ),
+        ],)
+     
       ),
     );
   }
