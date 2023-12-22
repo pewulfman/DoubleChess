@@ -31,27 +31,20 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  Color _backgroundColor = Colors.green;
-
-  void _changeColor(){
-    setState(() {
-      _backgroundColor = _backgroundColor == Colors.white ? Colors.blue : Colors.white;
-    });
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: _backgroundColor,
+      backgroundColor: Colors.blueGrey,
       body: Center(
-        child : Column(
+          child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget> [
                 StopWatch(),
                 StopWatch(),
-              ],
+              ]
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -62,7 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 ChessBoard(),
               ],
             ),
-        ],)
+        ],),
+      
      
       ),
     );

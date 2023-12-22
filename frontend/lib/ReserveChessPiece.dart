@@ -38,15 +38,21 @@ class RectangleReserveChessPiece extends StatelessWidget {
 
 }
 class ReserveChessPiece extends StatefulWidget {
+
   @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    throw UnimplementedError();
-  }
+  State<ReserveChessPiece> createState() => _ReserveChessPieceState();
 
 }
 
 class _ReserveChessPieceState extends State<ReserveChessPiece> {
+    Color _backgroundColor = Colors.green;
+
+  void _changeColor(){
+    setState(() {
+      _backgroundColor = _backgroundColor == Colors.white ? Colors.blue : Colors.white;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build

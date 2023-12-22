@@ -5,8 +5,8 @@ authors = ["lucperkins <lucperkins@gmail.com>"]
 edition = "2018"
 
 [dependencies]
-actix-rt = "1.0.0"
-actix-web = "2.0.0"
+actix-rt = "2.9.0"
+actix-web = "4.4.0"
 diesel = { version = "1.4.3", features = ["postgres", "r2d2"] }
 dotenv = "0.15.0"
 env_logger = "0.7.1"
